@@ -45,12 +45,7 @@ describe('autosize directive', function() {
         span.css('white-space', 'pre');
         span.text(text);
         container.append(span);
-
-        // get padding to ensure width doesn't cut off text
-        var paddingRight = parseInt(span.css('padding-right'), 10);
-        var paddingLeft = parseInt(span.css('padding-left'), 10);
-
-        width = paddingLeft + parseInt(span.prop('offsetWidth'), 10) + paddingLeft + threshold;
+        width = parseInt(span.prop('offsetWidth'), 10) + threshold;
 
         span.remove();
 
